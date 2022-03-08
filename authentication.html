@@ -25,7 +25,7 @@
                 "currency": "USD"
             }
         );
-        
+        lpTag.identities = [];
         // identity function
         function identityFn(callback) {
             callback({
@@ -34,7 +34,7 @@
                 sub: "WebMsgTest1245"
             })
         }
-        lpTag.identities = [];
+       
         lpTag.identities.push(identityFn);
         
         
