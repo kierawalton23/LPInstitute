@@ -45,7 +45,7 @@
         }
         function lpGetAuthenticationToken(callback) {
             var r = new XMLHttpRequest();
-            r.open("GET", `https://calm-mesa-48745.herokuapp.com/messaging/idp/token?sub=${subClaim}&expires=259200&passSdes=true&customerType=abc`);
+            r.open("GET", `https://calm-mesa-48745.herokuapp.com/messaging/idp/token?sub=${subClaim}&expires=259200&passSdes=true&customerType=def`);
             //&passSdes=true&companyBranch=branch1&firstname=kiera&lastname=walton
             r.onload = function () {
                 if (r.status != 200) {
