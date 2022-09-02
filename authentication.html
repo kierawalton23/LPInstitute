@@ -19,20 +19,20 @@
         // Send cart total value using SDEs
         lpTag.sdes =lpTag.sdes || {};
 
-        lpTag.sdes.push(
-            {
-                "type": "cart",
-                "total": 500,
-                "currency": "USD"
-            },
-            {
-                "type": "personal",  //MANDATORY
-                "personal": {
-                    "firstname": "John",  // FIRST NAME
-                    "lastname": "Doe",
-                }
-            }
-        );
+        // lpTag.sdes.push(
+        //     {
+        //         "type": "cart",
+        //         "total": 500,
+        //         "currency": "USD"
+        //     },
+        //     {
+        //         "type": "personal",  //MANDATORY
+        //         "personal": {
+        //             "firstname": "John",  // FIRST NAME
+        //             "lastname": "Doe",
+        //         }
+        //     }
+        // );
         lpTag.identities = [];
         
         // identity function
@@ -45,7 +45,7 @@
         }
         function lpGetAuthenticationToken(callback) {
             var r = new XMLHttpRequest();
-            r.open("GET", `https://calm-mesa-48745.herokuapp.com/messaging/idp/token?sub=${subClaim}&expires=259200`);
+            r.open("GET", `https://calm-mesa-48745.herokuapp.com/messaging/idp/token?sub=${subClaim}&expires=259200&customerType=abc&passSdes=true`);
             //&passSdes=true&companyBranch=branch1&firstname=kiera&lastname=walton
             r.onload = function () {
                 if (r.status != 200) {
