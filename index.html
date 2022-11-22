@@ -24,7 +24,24 @@
                 console.log("data: " + JSON.stringify(data));
             }
         });
+        // eventName: minimized 
+         lpTag.events.bind({
+             eventName: "minimized",
+             appName: "lpUnifiedWindow",
+             func: callbackFunction
+         });
 
+        // eventName: windowClosed 
+         lpTag.events.bind({
+             eventName: "windowClosed",
+             appName: "lpUnifiedWindow",
+             func: callbackFunction
+         });
+
+         function callbackFunction(data, eventInfo) {
+            console.log(eventInfo);
+            console.log(data);
+         }
         // Send page title and cart total value using SDEs
         lpTag.sdes =lpTag.sdes || {};
 
