@@ -20,10 +20,9 @@
         lpTag.events.bind({
             appName: "LP_OFFERS", 
             eventName: "START", 
-            func: function(data) {
-                console.log("data: " + JSON.stringify(data));
+            func: callbackFunction
             }
-        });
+        );
         // eventName: minimized 
          lpTag.events.bind({
              eventName: "minimized",
