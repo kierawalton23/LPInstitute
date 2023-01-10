@@ -13,7 +13,7 @@
 
     <script>
         window.lpTag = window.lpTag || {};
-        lpTag.section = 'authenticationTest';
+        // lpTag.section = 'authenticationTest';
 
         // START event testing
 
@@ -23,19 +23,19 @@
             func: callbackFunction
             }
         );
-        // eventName: minimized 
-         lpTag.events.bind({
-             eventName: "minimized",
-             appName: "lpUnifiedWindow",
-             func: callbackFunction
-         });
+        // // eventName: minimized 
+        //  lpTag.events.bind({
+        //      eventName: "minimized",
+        //      appName: "lpUnifiedWindow",
+        //      func: callbackFunction
+        //  });
 
-        // eventName: windowClosed 
-         lpTag.events.bind({
-             eventName: "windowClosed",
-             appName: "lpUnifiedWindow",
-             func: callbackFunction
-         });
+        // // eventName: windowClosed 
+        //  lpTag.events.bind({
+        //      eventName: "windowClosed",
+        //      appName: "lpUnifiedWindow",
+        //      func: callbackFunction
+        //  });
 
          function callbackFunction(data, eventInfo) {
             console.log(eventInfo);
