@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kiera Test Site</title>
     <!-- BEGIN LivePerson Monitor. -->
       
     <script type="text/javascript">
@@ -14,51 +14,25 @@
 
     <script>
         window.lpTag = window.lpTag || {};
-        lpTag.section = 'authenticationTest';
-        var subClaim = "testSub";
-
-        // Send cart total value using SDEs
-        lpTag.sdes =lpTag.sdes || {};
-
-        // lpTag.sdes.push(
-        //     {
-        //         "type": "cart",
-        //         "total": 500,
-        //         "currency": "USD"
-        //     },
-        //     {
-        //         "type": "personal",  //MANDATORY
-        //         "personal": {
-        //             "firstname": "John",  // FIRST NAME
-        //             "lastname": "Doe",
-        //         }
-        //     }
-        // );
+        var subClaim = "test";
+       
         lpTag.identities = [];
-        
+        lpTag.identities.push(identityFn);
+
         // identity function
         function identityFn(callback) {
             callback({
-                iss: "pocapp",
+                iss: "https://www.malenky.net",
                 acr: "loa1",
                 sub: subClaim
             })
         }
-        function lpGetAuthenticationToken(callback) {
-            var r = new XMLHttpRequest();
-            r.open("GET", `https://calm-mesa-48745.herokuapp.com/messaging/idp/token?sub=${subClaim}&expires=259200&passSdes=true&customerType=abc`);
-            //&passSdes=true&companyBranch=branch1&firstname=kiera&lastname=walton
-            r.onload = function () {
-                if (r.status != 200) {
-                    console.log("IDP not working, status: " + r.status.toString());
-                 };
-            callback(r.responseText);
-            };
-            r.send();
-        }
-       
-        lpTag.identities.push(identityFn);
         
+        function lpGetAuthenticationToken(callback) {
+            console.log("lp asked for id token");
+            const id_token =  "eyJhbGciOiJSUzI1NiIsImtpZCI6IldlYkNoYXRLZXlTdG9yZSIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYWNjOjI1OTY2MzI5Il0sImV4cCI6MTY3NTYxMzEwNCwiaWF0IjoxNjczMDIxMTA0LCJpc3MiOiJodHRwczovL3d3dy5tYWxlbmt5Lm5ldCIsImxwX3NkZXMiOlt7ImluZm8iOnsiY3N0YXR1cyI6IkNBTTQwIiwiY3R5cGUiOiIxMjM0In0sInR5cGUiOiJjdG1yaW5mbyJ9XSwic3ViIjoidGVzdCJ9.IVl2hOpbj3p2a8Ua_FgRPODsBRLXgaCNhUHNhmwXWqa3wlY1xVgysYmSMzgIR1-s92iRxoaXK_WiL_Xa7NGRt5SBrvndGdm2-uy_JvcuGKchZNq8L4kOKfo2m3uWjFZtEPAxpTnq0P5Kti7BmtYydlS-F0GGJUvpx4l1eXroCnlzfwcHuYPfgiuRa1biu_Hd5mQyakXwcRVOVWlfSxI-gKtSNj7Yqztr12Ft7n9NN5wVCYhKecMUGtxJolPRpH03U4pKymwV5mUxBfG-ZdZMgfyPaIjN-XFiUffD5n5YyKGtQ7sw_OrvmeY5ek-UgZpUa_KbMsEZsEVafrcfwzrx_g";
+            callback(id_token);
+        }
         
     </script>
     
@@ -66,7 +40,8 @@
 
 <body>
     <div class="jumbotron text-center">
-        <h2>Authenticated Space</h2>
+        <h2>Kiera's Test Site</h2>
+        <h4>Authenticated Space</h4>
         <div>
             <a href="index.html"><button type="button" class="btn btn-primary">Go to Unauthenticated Space</button></a>
         </div>
