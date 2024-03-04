@@ -17,18 +17,18 @@
         lpTag.identities = [];
         lpTag.identities.push(identityFn);
 
-        // identity function
-        function identityFn(callback) {
+         // identity function
+         function identityFn(callback) {
             callback({
-                iss: "https://www.malenky.net",
+                iss: "https://siri-test.co.uk",
                 acr: "loa1",
                 sub: subClaim
             })
         }
-        
+
         function lpGetAuthenticationToken(callback) {
             console.log("lp asked for id token");
-            const id_token =  "eyJhbGciOiJSUzI1NiIsImtpZCI6IldlYkNoYXRLZXlTdG9yZSIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYWNjOjI1OTY2MzI5Il0sImV4cCI6MTY3NTYxMzEwNCwiaWF0IjoxNjczMDIxMTA0LCJpc3MiOiJodHRwczovL3d3dy5tYWxlbmt5Lm5ldCIsImxwX3NkZXMiOlt7ImluZm8iOnsiY3N0YXR1cyI6IkNBTTQwIiwiY3R5cGUiOiIxMjM0In0sInR5cGUiOiJjdG1yaW5mbyJ9XSwic3ViIjoidGVzdCJ9.IVl2hOpbj3p2a8Ua_FgRPODsBRLXgaCNhUHNhmwXWqa3wlY1xVgysYmSMzgIR1-s92iRxoaXK_WiL_Xa7NGRt5SBrvndGdm2-uy_JvcuGKchZNq8L4kOKfo2m3uWjFZtEPAxpTnq0P5Kti7BmtYydlS-F0GGJUvpx4l1eXroCnlzfwcHuYPfgiuRa1biu_Hd5mQyakXwcRVOVWlfSxI-gKtSNj7Yqztr12Ft7n9NN5wVCYhKecMUGtxJolPRpH03U4pKymwV5mUxBfG-ZdZMgfyPaIjN-XFiUffD5n5YyKGtQ7sw_OrvmeY5ek-UgZpUa_KbMsEZsEVafrcfwzrx_g";
+            const id_token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTQyNDExMzIsImlhdCI6MTY2Nzg0MTEzMiwiaXNzIjoiaHR0cHM6Ly9zaXJpLXRlc3QuY28udWsiLCJscF9zZGVzIjpbeyJpbmZvIjp7ImFjY291bnROYW1lIjoiYmFuayBjb3JwIiwiYmFsYW5jZSI6LTQwMC45OSwiY29tcGFueUJyYW5jaCI6IkJyb2FkYmFuZCIsImNvbXBhbnlTaXplIjo1MDAsImNzdGF0dXMiOiJjYW5jZWxsZWQiLCJjdHlwZSI6InZpcCIsImN1cnJlbmN5IjoiVVNEIiwiY3VzdG9tZXJJZCI6IjEzODc2NkFDIiwiaW1laSI6IjEyMzQ1Njc4OTAxMjM0NSIsImxhc3RQYXltZW50RGF0ZSI6eyJkYXkiOjE1LCJtb250aCI6MTAsInllYXIiOjIwMTR9LCJyZWdpc3RyYXRpb25EYXRlIjp7ImRheSI6MjMsIm1vbnRoIjo1LCJ5ZWFyIjoyMDEzfSwicm9sZSI6ImJyb2tlciIsInNvY2lhbElkIjoiMTEyNTYzMjQ3ODAiLCJzdG9yZU51bWJlciI6IjEyMzg2NSIsInN0b3JlWmlwQ29kZSI6IjIwNTA1IiwidXNlck5hbWUiOiJ1c2VyMDAwIn0sInR5cGUiOiJjdG1yaW5mbyJ9LHsicGVyc29uYWwiOnsiYWdlIjp7ImFnZSI6MzQsImRheSI6MTUsIm1vbnRoIjo0LCJ5ZWFyIjoxOTgwfSwiY29tcGFueSI6ImNvbXBhbnkiLCJjb250YWN0cyI6W3siZW1haWwiOiJteW5hbWUxQGV4YW1wbGUuY29tIiwicGhvbmUiOiIwNzAwMDAwMDAwMCJ9XSwiZmlyc3RuYW1lIjoiSm9obiIsImdlbmRlciI6Ik1BTEUiLCJsYW5ndWFnZSI6ImVuLVVTIiwibGFzdG5hbWUiOiJTbWl0aCJ9LCJ0eXBlIjoicGVyc29uYWwifV0sInN1YiI6InNpcmktdGVzdCJ9.c75UkWI79yF-uXGGeJ02klHzNkzpoTs8WBTj2N7crplZ5hwoO02hBtCi3oqXWksU--t-V6AFyVk9mzWjZrCOFCyynHKcgC0jdCLfndB7ROu98aPSkbLcOaD96J5asyfTpK8zjjuE4wnXs6Hp0IFJeiQBevHGsydx30v_5_k4Xm9eNQqFo9EDYSpmTChZCJHAeXRjCfKK3eRWJMJ25SrCGr58qPLhRumXvVzb0qhE-rVGAIBy98DxQUcO8X8vbX57YxGCthHPv4eNufgs0ZXk2JPGfQXMI_14YF1chIz9oJjRJk05cK10IrDf_5MVmoLs_1mPTKK5ZF-H1QL-V6y7Tg";
             callback(id_token);
         }
         
