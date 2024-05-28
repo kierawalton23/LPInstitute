@@ -10,16 +10,15 @@
 <!-- END LivePerson Monitor. -->
     <script>
         window.lpTag = window.lpTag || {};
-        // lpTag.section = "kiera_test";
-    
+        
         // START event testing
 
-        lpTag.events.bind({
-            appName: "LP_OFFERS", 
-            eventName: "START", 
-            func: callbackFunction
-            }
-        );
+        // lpTag.events.bind({
+        //     appName: "LP_OFFERS", 
+        //     eventName: "START", 
+        //     func: callbackFunction
+        //     }
+        // );
         // // eventName: minimized 
         //  lpTag.events.bind({
         //      eventName: "minimized",
@@ -34,10 +33,10 @@
         //      func: callbackFunction
         //  });
 
-         function callbackFunction(data, eventInfo) {
-            console.log(eventInfo);
-            console.log(data);
-         }
+        //  function callbackFunction(data, eventInfo) {
+        //     console.log(eventInfo);
+        //     console.log(data);
+        //  }
         // Send page title and cart total value using SDEs
         lpTag.sdes =lpTag.sdes || {};
 
