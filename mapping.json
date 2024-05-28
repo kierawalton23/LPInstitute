@@ -1,0 +1,30 @@
+{
+    "BoS": {
+        "userSetupUrl": "",
+        "createRoleUrl": "",
+        "editRoleUrl": "",
+        "changeVotesUrl": "",
+        "editPanelProfileUrl": "",
+        "bacsPaymentUrl": "",
+        "initPaymentURl": "",
+        "exchangeRateUrl": "",
+        "runReportUrl": "https://cbosupport.bankofscotland.co.uk/how-to-use-cbo/statements-and-reports/reports/article/how-to-run-a-report?WT.ac=bos-CBO_live_chat-how_to_run_a_report-inline_link-how_to_run_a_report",
+        "helpCentreUrl": "cbosupport.bankofscotland.co.uk"
+    },
+    "Lloyds": {
+        "userSetupUrl": "",
+        "createRoleUrl": "",
+        "editRoleUrl": "",
+        "changeVotesUrl": "",
+        "editPanelProfileUrl": "",
+        "bacsPaymentUrl": "",
+        "initPaymentURl": "",
+        "exchangeRateUrl": "",
+        "runReportUrl": "https://cbosupport.lloydsbank.com/how-to-use-cbo/statements-and-reports/reports/article/how-to-run-a-report?WT.ac=Lloyds-CBO_live_chat-how_to_run_a_report-inline_link-find_out_how_to_run_a_report",
+        "helpCentreUrl": "cbosupport.lloydsbank.com"
+    }
+}
+
+URL:
+Lloyds: cbosupport.lloydsbank.com
+BoS: cbosupport.bankofscotland.co.uk
